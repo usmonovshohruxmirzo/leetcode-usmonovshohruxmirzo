@@ -1,4 +1,4 @@
-var getCommon = function (nums1, nums2) {
+let getCommon = function (nums1, nums2) {
   let i = 0,
     j = 0;
 
