@@ -15,3 +15,9 @@ class Solution:
         if s[-1] == "1": ones += 1
 
         return best + ones
+    
+# Test cases
+solution = Solution()
+print(solution.maxScore("011101"))
+print(solution.maxScore("00111"))
+print(solution.maxScore("1111"))
