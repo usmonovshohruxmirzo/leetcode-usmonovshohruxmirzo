@@ -16,6 +16,6 @@ class Solution:
         return count
 # Test Cases
 solution = Solution()
-# print(solution.countPalindromicSubsequence("aabca"))
-# print(solution.countPalindromicSubsequence("abc"))
-# print(solution.countPalindromicSubsequence("bbcbaba"))
+print(solution.countPalindromicSubsequence("aabca"))
+print(solution.countPalindromicSubsequence("abc"))
+print(solution.countPalindromicSubsequence("bbcbaba"))
