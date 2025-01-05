@@ -23,6 +23,15 @@ class Solution:
             shift += shift_diff[i]
             current_char = s_list[i]
             new_char = chr((ord(current_char) - ord("a") + shift) % 26 + ord("a"))
+            """
+                1. ord("a") = 97
+                2. ord("a") - ord("a") = 97 - 97 = 0
+                3. 0 + 1 = 1 (we shift forward by 1).
+                4. (1) % 26 = 1 (no wrapping needed).
+                5. 1 + ord("a") = 1 + 97 = 98.
+                6. chr(98) = "b".
+                So, "a" shifted forward by 1 becomes "b".
+            """
             s_list[i] = new_char
 
         return "".join(s_list)
