@@ -18,17 +18,15 @@
 // };
 
 var longestNiceSubarray = function (nums) {
-  let left = 0,
+  let l = 0,
     bitmask = 0,
-    maxLen = 0;
-
-  for (let right = 0; right < nums.length; right++) {
-    while (bitmask & nums[right]) bitmask ^= nums[left++];
-    bitmask |= nums[right];
-    maxLen = Math.max(maxLen, right - left + 1);
+    max = 0;
+  for (let r = 0; r < nums.length; r++) {
+    while (bitmask & nums[r]) bitmask ^= nums[l++];
+    bitmask |= nums[r];
+    max = Math.max(max, r - l + 1);
   }
-
-  return maxLen;
+  return max;
 };
 
 console.log(longestNiceSubarray([1, 3, 8, 48, 10]));
